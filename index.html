@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../scripts/scripts.js" defer> </script>
 </head>
+
 <body>
-    <iframe src="https://go.screenpal.com/watch/cTn2njnhuuY" width="500" height="500"> </iframe>
+
+    <div id="item1" class="item active">
+        <img src="../assets/asana.png"> 
+        <button onclick="showItem('item2')"> Next Item </button>
+    </div>
+
+    <div id="item2" class="item">
+        <img src="../assets/gitlab.png"> 
+        <button onclick="showItem('item3')"> Next Item </button>
+    </div>
+
+    <div id="item3" class="item">
+        <img src="../assets/openproject.png">
+        <button onclick="showItem('item4')"> Next Item </button>
+    </div>
+
+    <div id="item4" class="item">
+        <img src="../assets/react.png">
+    </div>
+ 
 
     
 </body>

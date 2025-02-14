@@ -1,4 +1,16 @@
-img{
-    display: block;
 
+.item {
+    display: none; /* Hide all pages initially */
+}
+.active {
+    display: block; /* Show only the active page */
+}
+
+div{
+    background-color: powderblue;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
 }
