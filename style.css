@@ -1,16 +1,88 @@
+.topnav {
+    width: 98%;
+    background-color: rgb(101, 194, 206);
+    padding: 15px 0;
+    position: fixed;
+    top: 10px;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.topnav ul li {
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+.topnav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh; /* Full height */
+    background-color: #222;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 60px; /* Space for navbar */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar li:hover {
+    background-color: rgb(133, 133, 75);
+    font-size: 18px;
+}
 
 .item {
-    display: none; /* Hide all pages initially */
+    display: none;
+    text-align: center;
+    background-color: rgb(101, 194, 206);
+    max-width: 600px;
+    padding: 20px;
+    position: absolute; /* Allows us to position it freely */
+    top: 50%; /* Move it to the middle */
+    right: 15%; /* Move it towards the right */
+    transform: translateY(-50%); /* Ensures perfect vertical centering */
 }
+
 .active {
-    display: block; /* Show only the active page */
+    display: block;
 }
 
-div{
-    background-color: powderblue;
+.next{
+    text-align: right;
+    position: relative; /* Ensures it stays positioned relative to normal flow */
+    top: 50px; /* Pushes it slightly down */
 }
 
-img{
-    max-width: 100%;
+img {
+    max-width: 50%; /* Adjust as needed */
     height: auto;
+    display: block;
+    margin: 0 auto; /* Centering */
 }
+
+
