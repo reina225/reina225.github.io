@@ -1,6 +1,6 @@
 .topnav {
     width: 98%;
-    background-color: rgb(101, 194, 206);
+    background-color: #0051b4;
     padding: 15px 0;
     position: fixed;
     top: 10px;
@@ -27,9 +27,9 @@
 }
 
 .sidebar {
-    width: 200px;
+    width: 400px;
     height: 100vh; /* Full height */
-    background-color: #222;
+    background-color: #f7f5f5;
     position: fixed;
     left: 0;
     top: 0;
@@ -56,16 +56,32 @@
     font-size: 18px;
 }
 
+.content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full height */
+    margin-left: 400px; /* Adjust for sidebar width */
+    gap: 20px; /* Reduce space between elements */
+    padding-top: 120px; /* Space for the navbar */
+    justify-content: flex-start; /* Aligns everything to the top */
+}
+
+.content-header {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin: 0; /* Remove default margin */
+    padding: 30px 0; /* Adjust padding */
+}
+
 .item {
     display: none;
     text-align: center;
     background-color: rgb(101, 194, 206);
     max-width: 600px;
     padding: 20px;
-    position: absolute; /* Allows us to position it freely */
-    top: 50%; /* Move it to the middle */
-    right: 15%; /* Move it towards the right */
-    transform: translateY(-50%); /* Ensures perfect vertical centering */
 }
 
 .active {
@@ -79,10 +95,13 @@
 }
 
 img {
-    max-width: 50%; /* Adjust as needed */
-    height: auto;
+    width: 450px; /* Set a fixed width */
+    height: 450px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image fills the dimensions without distortion */
     display: block;
-    margin: 0 auto; /* Centering */
+    margin: 0 auto; /* Center the image */
+    border-radius: 10px; /* Optional: Adds rounded corners */
 }
+
 
 
