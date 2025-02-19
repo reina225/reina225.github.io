@@ -1,11 +1,3 @@
-/*function showItem (itemId){
-   // Hide all items
-   document.querySelectorAll('.item').forEach(item => item.classList.remove('active'));
-            
-   // Show the selected item
-   document.getElementById(itemId).classList.add('active');  
-}*/
-
 let items = document.querySelectorAll(".item");
 let remainingItems = Array.from(items).filter(item => item.id !== "welcome"); // Exclude the welcome screen
 
@@ -33,8 +25,6 @@ function showRandomItem() {
    // Remove it from remainingItems array to avoid repetition
    remainingItems.splice(randomIndex, 1);
 }
-
-
 
 function resetItems() {
    // Reset remainingItems array (excluding the welcome screen)
