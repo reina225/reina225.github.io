@@ -12,21 +12,59 @@
     <aside class="sidebar">
         <ul>
             <li>
-                <div class="score" id="score">0</div>
-                <button onclick="changeScore(1)">+ 1</button>
-                <button onclick="changeScore(-1)">-1</button>
-                <button onclick="resetScore()"> 0 </button>
+                <div class="team">
+                    <h2>Team 1</h2>
+                    <div class="score-container">
+                        <button onclick="changeScore(1, -1)">-1</button>
+                        <div class="score" id="score1">0</div>
+                        <button onclick="changeScore(1, 1)">+1</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="team">
+                    <h2>Team 2</h2>
+                    <div class="score-container">
+                        <button onclick="changeScore(2, -1)">-1</button>
+                        <div class="score" id="score2">0</div>
+                        <button onclick="changeScore(2, 1)">+1</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="team">
+                    <h2>Team 3</h2>
+                    <div class="score-container">
+                        <button onclick="changeScore(3, -1)">-1</button>
+                        <div class="score" id="score3">0</div>
+                        <button onclick="changeScore(3, 1)">+1</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="team">
+                    <h2>Team 4</h2>
+                    <div class="score-container">
+                        <button onclick="changeScore(4, -1)">-1</button>
+                        <div class="score" id="score4">0</div>
+                        <button onclick="changeScore(4, 1)">+1</button>
+                    </div>
+                </div>
             </li>
         </ul>
+    
+        <!-- Reset button placed properly at the bottom -->
+        <button class="reset-button" onclick="resetAllScores()">Reset All Scores</button>
     </aside>
     
+    
+    
+    
     <div class="content">
-        <h1 class="content-header">Gallery</h1> 
+        <h1 class="content-header">Ice Breaker</h1> 
 
         <div id="welcome" class="item active">
-            <h1>Welcome to the Gallery</h1>
-            <p>Click the button below to view random items</p>
-            <button onclick="showRandomItem()">Start</button>
+            <button onclick="showRandomItem()">Press START</button>
         </div>
 
         <div id="item1" class="item">
@@ -84,267 +122,323 @@
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item7" class="item">
+            <img id="logoImage" src="../assets/preview/deepseek.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Deepseek</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item8" class="item">
+            <img id="logoImage" src="../assets/preview/easypay.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Easy Pay</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item9" class="item">
+            <img id="logoImage" src="../assets/preview/edge.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Microsoft Edge</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item10" class="item">
+            <img id="logoImage" src="../assets/preview/figma.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Figma</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item11" class="item">
+            <img id="logoImage" src="../assets/preview/firefox.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Mozilla Firefox</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item12" class="item">
+            <img id="logoImage" src="../assets/preview/freshdesk.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Freshdesk</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item13" class="item">
+            <img id="logoImage" src="../assets/preview/gemini.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Google Gemini</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item4" class="item">
+            <img id="logoImage" src="../assets/preview/gitbash.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Git Bash</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item15" class="item">
+            <img id="logoImage" src="../assets/preview/gitlab.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Gitlab</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item16" class="item">
+            <img id="logoImage" src="../assets/preview/glossylounge.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">GlossyLounge</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item17" class="item">
+            <img id="logoImage" src="../assets/preview/google_ads.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Google Ads</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item18" class="item">
+            <img id="logoImage" src="../assets/preview/google_sheets.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Google Sheets</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item19" class="item">
+            <img id="logoImage" src="../assets/preview/google_tag_assistant.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Google Tag Assistant</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item20" class="item">
+            <img id="logoImage" src="../assets/preview/hubspot.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">HubSpot</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item21" class="item">
+            <img id="logoImage" src="../assets/preview/huggingface.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">HuggingFace</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item22" class="item">
+            <img id="logoImage" src="../assets/preview/lambdatest.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">LambdaTest</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item23" class="item">
+            <img id="logoImage" src="../assets/preview/lawformsusa.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">LawFormsUsa</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item24" class="item">
+            <img id="logoImage" src="../assets/preview/mailinator.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Mailinator</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item25" class="item">
+            <img id="logoImage" src="../assets/preview/meta.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Meta</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item26" class="item">
+            <img id="logoImage" src="../assets/preview/mixtral.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Mixtral</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item27" class="item">
+            <img id="logoImage" src="../assets/preview/openai.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Open AI</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item28" class="item">
+            <img id="logoImage" src="../assets/preview/openproject.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">OpenProject</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item29" class="item">
+            <img id="logoImage" src="../assets/preview/primogems.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Primogems</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item30" class="item">
+            <img id="logoImage" src="../assets/preview/quickbooks.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">QuickBooks</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item31" class="item">
+            <img id="logoImage" src="../assets/preview/react.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">React</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
 
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
-            <div class="buttons">
-                <button id="checkBtn" onclick="checkAnswer()">Check</button>
-                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
-            </div>
-        </div>
-
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
-            <div class="buttons">
-                <button id="checkBtn" onclick="checkAnswer()">Check</button>
-                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
-            </div>
-        </div>
-
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
-            <div class="buttons">
-                <button id="checkBtn" onclick="checkAnswer()">Check</button>
-                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
-            </div>
-        </div>
-
-        <div id="item6" class="item">
-            <img id="logoImage" src="../assets/preview/chrome.png"> 
-            <p id="logoName" style="display: none; font-weight: bold;">Google Chrome</p>
+        <div id="item32" class="item">
+            <img id="logoImage" src="../assets/preview/zoom.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Zoom</p>
             <div class="buttons">
                 <button id="checkBtn" onclick="checkAnswer()">Check</button>
                 <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
     
+
+        <div id="item33" class="item">
+            <img id="logoImage" src="../assets/preview/safari.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Safari</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="item34" class="item">
+            <img id="logoImage" src="../assets/preview/semrush.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Semrush</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="item35" class="item">
+            <img id="logoImage" src="../assets/preview/shopify.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Shopify</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="item36" class="item">
+            <img id="logoImage" src="../assets/preview/signedtrue.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">SignedTrue</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="item37" class="item">
+            <img id="logoImage" src="../assets/preview/sitebot.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Sitebot</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="item38" class="item">
+            <img id="logoImage" src="../assets/preview/slack.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Slack</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="item39" class="item">
+            <img id="logoImage" src="../assets/preview/teacherai.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">TeacherAI</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="item40" class="item">
+            <img id="logoImage" src="../assets/preview/vuzo.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Vuzo</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="item41" class="item">
+            <img id="logoImage" src="../assets/preview/weremote.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">Weremote</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
+            </div>
+        </div>
+
+
  
  
 </body>

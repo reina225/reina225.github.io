@@ -1,54 +1,97 @@
-.sidebar {
-    width: 25vw;
+/* Prevent vertical scrolling */
+html, body {
     height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Adjust sidebar height */
+.sidebar {
+    width: 20vw;
+    height: 100vh; /* Make it exactly fit */
     background-color: #f7f5f5;
     position: fixed;
     left: 0;
     top: 0;
-    padding-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2vh;
+    overflow-y: auto; /* Enables scrolling inside sidebar if needed */
 }
 
 .sidebar ul {
     list-style-type: none;
     padding: 0;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.team {
+    text-align: center;
+    margin-bottom: 7vh;
+}
+
+.score-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8vw;
 }
 
 .score {
-    font-size: 3vw;
-    margin: 2vh;
+    font-size: 1.8vw;
+    min-width: 3.5vw;
+    text-align: center;
 }
 
 button {
-    font-size: 1.5vw;
-    padding: 1vh 2vw;
-    margin: 1vh;
+    font-size: 1.2vw;
+    padding: 0.8vh 1.5vw;
+    margin: 0.3vh;
+}
+
+.reset-button {
+    width: 80%;
+    font-size: 1.8vw;
+    padding: 1.2vh 2vw;
+    background-color: rgb(243, 242, 242);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Ensures everything is centered */
     height: 100vh;
-    margin-left: 25vw;
-    gap: 2vh;
-    padding-top: 15vh;
-    justify-content: flex-start;
+    margin-left: 20vw;
+    gap: 1vh; /* Reduce gap to keep elements closer */
+    padding-top: 2vh; /* Move everything higher */
+    justify-content: flex-start; /* Aligns everything to the top */
 }
 
 .content-header {
-    font-size: 3vw;
+    font-size: 3.5vw;
     font-weight: bold;
     text-align: center;
     color: #333;
-    margin: 0;
-    padding: 3vh 0;
+    margin-bottom: 1vh; /* Reduced margin to move it higher */
+    padding-top: 0.5vh; /* Moves it closer to the top */
+    border-bottom: 0.1vw solid rgba(0, 0, 0, 0.1); /* Faint line below H1 */
+    width: 80%; /* Ensures the line isn't too wide */
+    padding-bottom: 1vh; /* Adds a little spacing between the H1 and the image */
 }
+
 
 .item {
     display: none;
     text-align: center;
-    background-color: rgb(101, 194, 206);
-    max-width: 50vw;
+    max-width: 60vw;
     padding: 3vh;
 }
 
@@ -56,20 +99,27 @@ button {
     display: block;
 }
 
-.next {
-    text-align: right;
-    position: relative;
-    top: 3vh;
-}
-
+/* Ensure the image is aligned properly */
 img {
-    width: 40vw;
-    height: auto;
-    object-fit: cover;
+    width: 50vw;
+    max-height: 55vh;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
-    border-radius: 2vw;
+    border-radius: 1.5vw;
+    margin-bottom: 3vh;
 }
 
+#logoName {
+    display: none;
+    font-weight: bold;
+    font-size: 2.5vw; /* Increased font size */
+    text-align: center;
+    margin-top: 1vh;
+}
 
-
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2vw; /* Ensure spacing between buttons */
+}

@@ -1,15 +1,23 @@
 let items = document.querySelectorAll(".item");
 let remainingItems = Array.from(items).filter(item => item.id !== "welcome"); // Exclude the welcome screen
-let score = 0;
+// Initialize scores for four teams
+let scores = [0, 0, 0, 0];
 
-function changeScore(value) {
-    score += value;
-    document.getElementById('score').textContent = score;
+function changeScore(team, amount) {
+    let scoreElement = document.getElementById("score" + team);
+    let currentScore = parseInt(scoreElement.textContent);
+    scoreElement.textContent = currentScore + amount;
 }
 
-function resetScore() {
-    score = 0;
-    document.getElementById('score').textContent = score;
+function resetAllScores() {
+    for (let i = 1; i <= 4; i++) {
+        document.getElementById("score" + i).textContent = "0";
+    }
+}
+
+
+function updateScore(team) {
+    document.getElementById(`score${team}`).textContent = scores[team - 1];
 }
 
 function showRandomItem() {
