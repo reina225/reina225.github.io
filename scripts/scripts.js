@@ -20,8 +20,7 @@ function showRandomItem() {
 
     if (remainingItems.length === 0) {
         alert("All items have been displayed! The gallery will reset.");
-        location.reload();
-        return;
+        remainingItems = Array.from(items).filter(item => item.id !== "welcome"); // Reset the list
     }
 
     let randomIndex = Math.floor(Math.random() * remainingItems.length);
@@ -29,26 +28,20 @@ function showRandomItem() {
 
     nextItem.classList.add("active");
     remainingItems.splice(randomIndex, 1);
-
-    // Reset buttons visibility
-    document.getElementById("checkBtn").style.display = "block";
-    document.getElementById("nextBtn").style.display = "none";
 }
+
 
 function checkAnswer() {
-    let image = document.getElementById("logoImage");
-    let logoNameElement = document.getElementById("logoName");
+    let activeItem = document.querySelector(".item.active");
+    let image = activeItem.querySelector("img");
+    let logoNameElement = activeItem.querySelector("p");
+    let checkBtn = activeItem.querySelector(".buttons button:nth-child(1)");
+    let nextBtn = activeItem.querySelector(".buttons button:nth-child(2)");
 
     if (image.src.includes("/preview/")) {
-        // Change image source to the answer folder
         image.src = image.src.replace("/preview/", "/answers/");
-
-        // Show the hardcoded logo name
         logoNameElement.style.display = "block";
-
-        // Hide Check button, show Next button
-        document.getElementById("checkBtn").style.display = "none";
-        document.getElementById("nextBtn").style.display = "block";
+        checkBtn.style.display = "none";
+        nextBtn.style.display = "block";
     }
 }
-
