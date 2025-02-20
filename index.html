@@ -9,19 +9,13 @@
 </head>
 
 <body>
-    <nav class="topnav">
-        <ul>                                                  
-            <li></li>
-        </ul>
-    </nav>
-
     <aside class="sidebar">
         <ul>
             <li>
                 <div class="score" id="score">0</div>
-                <button onclick="changeScore(1)">Add +1</button>
-                <button onclick="changeScore(-1)">Reduce -1</button>
-                <button onclick="resetScore()">Reset</button>
+                <button onclick="changeScore(1)">+ 1</button>
+                <button onclick="changeScore(-1)">-1</button>
+                <button onclick="resetScore()"> 0 </button>
             </li>
         </ul>
     </aside>
@@ -36,38 +30,61 @@
         </div>
 
         <div id="item1" class="item">
-            <img src="../assets/1.png"> 
-            <div class="next">
-                <button onclick="showRandomItem()">Next Item</button>
-                <button onclick="resetItems()">Reset</button>
+            <img id="logoImage" src="../assets/preview/aipro.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">AI Pro</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
-    
+        
+
         <div id="item2" class="item">
-            <img src="../assets/2.png"> 
-            <div class="next">
-                <button onclick="showRandomItem()">Next Item</button>
-                <button onclick="resetItems()">Reset</button>
+            <img id="logoImage" src="../assets/preview/anydesk.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">AI Pro</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
-    
+
         <div id="item3" class="item">
-            <img src="../assets/3.png">
-            <div class="next">
-                <button onclick="showRandomItem()">Next Item</button>
-                <button onclick="resetItems()">Reset</button>
+            <img id="logoImage" src="../assets/preview/asana.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">AI Pro</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
-    
+
         <div id="item4" class="item">
-            <img src="../assets/4.jpg">
-            <div class="next">
-                <button onclick="showRandomItem()">Next Item</button>
-                <button onclick="resetItems()">Reset</button>
+            <img id="logoImage" src="../assets/preview/aws.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">AI Pro</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
             </div>
         </div>
-    </div>
+        
+        <div id="item5" class="item">
+            <img id="logoImage" src="../assets/preview/chatbotask.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">AI Pro</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
+            </div>
+        </div>
+
+        <div id="item6" class="item">
+            <img id="logoImage" src="../assets/preview/chrome.png"> 
+            <p id="logoName" style="display: none; font-weight: bold;">AI Pro</p>
+            <div class="buttons">
+                <button id="checkBtn" onclick="checkAnswer()">Check</button>
+                <button id="nextBtn" onclick="showRandomItem()" style="display: none;">Next</button>
+            </div>
+        </div>
     
+ 
  
 </body>
 </html>

@@ -1,39 +1,11 @@
-.topnav {
-    width: 98%;
-    background-color: #0051b4;
-    padding: 15px 0;
-    position: fixed;
-    top: 10px;
-    z-index: 1000; /* Ensure it's above other content */
-}
-
-.topnav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: left;
-}
-
-.topnav ul li {
-    margin: 0 20px;
-    font-size: 18px;
-}
-
-.topnav ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
 .sidebar {
-    width: 400px;
-    height: 100vh; /* Full height */
+    width: 25vw;
+    height: 100vh;
     background-color: #f7f5f5;
     position: fixed;
     left: 0;
     top: 0;
-    padding-top: 60px; /* Space for navbar */
+    padding-top: 8vh;
 }
 
 .sidebar ul {
@@ -41,76 +13,62 @@
     padding: 0;
 }
 
-.sidebar ul li {
-    padding: 15px;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-.sidebar li:hover {
-    background-color: rgb(133, 133, 75);
-    font-size: 18px;
-}
-
 .score {
-    font-size: 2em;
-    margin: 20px;
+    font-size: 3vw;
+    margin: 2vh;
 }
+
 button {
-    font-size: 1em;
-    padding: 10px 20px;
-    margin: 5px;
+    font-size: 1.5vw;
+    padding: 1vh 2vw;
+    margin: 1vh;
 }
 
 .content {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    height: 100vh; /* Full height */
-    margin-left: 400px; /* Adjust for sidebar width */
-    gap: 20px; /* Reduce space between elements */
-    padding-top: 120px; /* Space for the navbar */
-    justify-content: flex-start; /* Aligns everything to the top */
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-left: 25vw;
+    gap: 2vh;
+    padding-top: 15vh;
+    justify-content: flex-start;
 }
 
 .content-header {
-    font-size: 32px;
+    font-size: 3vw;
     font-weight: bold;
     text-align: center;
     color: #333;
-    margin: 0; /* Remove default margin */
-    padding: 30px 0; /* Adjust padding */
+    margin: 0;
+    padding: 3vh 0;
 }
 
 .item {
     display: none;
     text-align: center;
     background-color: rgb(101, 194, 206);
-    max-width: 600px;
-    padding: 20px;
+    max-width: 50vw;
+    padding: 3vh;
 }
 
 .active {
     display: block;
 }
 
-.next{
+.next {
     text-align: right;
-    position: relative; /* Ensures it stays positioned relative to normal flow */
-    top: 50px; /* Pushes it slightly down */
+    position: relative;
+    top: 3vh;
 }
 
 img {
-    width: 450px; /* Set a fixed width */
-    height: 450px; /* Set a fixed height */
-    object-fit: cover; /* Ensures the image fills the dimensions without distortion */
+    width: 40vw;
+    height: auto;
+    object-fit: cover;
     display: block;
-    margin: 0 auto; /* Center the image */
-    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin: 0 auto;
+    border-radius: 2vw;
 }
 
 

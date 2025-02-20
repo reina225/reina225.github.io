@@ -1,42 +1,54 @@
 let items = document.querySelectorAll(".item");
 let remainingItems = Array.from(items).filter(item => item.id !== "welcome"); // Exclude the welcome screen
+let score = 0;
 
-function showRandomItem() {
-   // Hide the currently active item
-   let activeItem = document.querySelector(".item.active");
-   if (activeItem) {
-       activeItem.classList.remove("active");
-   }
-
-   // If all items have been displayed, show alert and reset
-   if (remainingItems.length === 0) {
-       alert("All items have been displayed! The gallery will reset.");
-       location.reload(); // Refresh the page
-       return;
-   }
-
-   // Pick a random item from remainingItems
-   let randomIndex = Math.floor(Math.random() * remainingItems.length);
-   let nextItem = remainingItems[randomIndex];
-
-   // Show the chosen item
-   nextItem.classList.add("active");
-
-   // Remove it from remainingItems array to avoid repetition
-   remainingItems.splice(randomIndex, 1);
+function changeScore(value) {
+    score += value;
+    document.getElementById('score').textContent = score;
 }
 
-function resetItems() {
-   // Reset remainingItems array (excluding the welcome screen)
-   remainingItems = Array.from(items).filter(item => item.id !== "welcome");
+function resetScore() {
+    score = 0;
+    document.getElementById('score').textContent = score;
+}
 
-   // Hide the currently active item
-   let activeItem = document.querySelector(".item.active");
-   if (activeItem) {
-       activeItem.classList.remove("active");
-   }
+function showRandomItem() {
+    let activeItem = document.querySelector(".item.active");
+    if (activeItem) {
+        activeItem.classList.remove("active");
+    }
 
-   // Show the welcome screen
-   document.getElementById("welcome").classList.add("active");
+    if (remainingItems.length === 0) {
+        alert("All items have been displayed! The gallery will reset.");
+        location.reload();
+        return;
+    }
+
+    let randomIndex = Math.floor(Math.random() * remainingItems.length);
+    let nextItem = remainingItems[randomIndex];
+
+    nextItem.classList.add("active");
+    remainingItems.splice(randomIndex, 1);
+
+    // Reset buttons visibility
+    document.getElementById("checkBtn").style.display = "block";
+    document.getElementById("nextBtn").style.display = "none";
+}
+
+function checkAnswer() {
+    let image = document.getElementById("logoImage");
+    let logoNameElement = document.getElementById("logoName");
+
+    if (image.src.includes("/preview/")) {
+        // Change image source to the answer folder
+        image.src = image.src.replace("/preview/", "/answers/");
+
+        // Show the hardcoded logo name
+        logoNameElement.style.display = "block";
+
+        // Hide Check button, show Next button
+        document.getElementById("checkBtn").style.display = "none";
+        document.getElementById("nextBtn").style.display = "block";
+    }
 }
 
