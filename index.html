@@ -10,18 +10,19 @@
 
 <body>
     <nav class="topnav">
-        <ul>
-            <li><a href="#">Welcome</a></li>
-            <li><a href="#">About Us</a></li>                                                     
-            <li><a href="#">Contact Us</a></li>
+        <ul>                                                  
+            <li></li>
         </ul>
     </nav>
 
     <aside class="sidebar">
         <ul>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
+            <li>
+                <div class="score" id="score">0</div>
+                <button onclick="changeScore(1)">Add +1</button>
+                <button onclick="changeScore(-1)">Reduce -1</button>
+                <button onclick="resetScore()">Reset</button>
+            </li>
         </ul>
     </aside>
     

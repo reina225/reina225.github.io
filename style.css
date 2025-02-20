@@ -56,6 +56,16 @@
     font-size: 18px;
 }
 
+.score {
+    font-size: 2em;
+    margin: 20px;
+}
+button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 5px;
+}
+
 .content {
     display: flex;
     flex-direction: column; /* Stack items vertically */
